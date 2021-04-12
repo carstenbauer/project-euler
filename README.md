@@ -1,6 +1,6 @@
 ## What is this?
 
-My Julia solutions to the first 50 Euler problems: https://projecteuler.net
+My Julia solutions to the first 50 Euler problems. See https://projecteuler.net and https://github.com/heetbeet/project-euler-julia.
 
 ## Instructions
 
