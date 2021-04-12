@@ -31,17 +31,14 @@ html"""
 """
 
 # ╔═╡ fb47f5bc-1092-42d9-b091-54d20566e7bd
-begin
-	euler1() = sum(i for i in 1:999 if iszero(rem(i,3)) || iszero(rem(i,5)))
-	euler1()
-end
+euler1() = sum(i for i in 1:999 if iszero(rem(i,3)) || iszero(rem(i,5)))
 
-# ╔═╡ a6a5a0c9-0eca-4261-93be-1eebb877a2c0
-# @benchmark euler1()
+# ╔═╡ 9a37e33e-d3b6-443e-bf8c-172aef142024
+euler1_answer = euler1()
 
 # ╔═╡ 1aae2c52-84a3-11eb-192d-9d80f63d47dd
 begin
-    submit_answer(euler1(); prob_num=1)
+    submit_answer(euler1_answer; prob_num=1)
 end
 
 # ╔═╡ 1aae2c52-84a3-11eb-0833-9be45059026d
@@ -53,29 +50,25 @@ html"""
 """
 
 # ╔═╡ a5fc6c1e-b391-4b0f-8460-1e0ee13cc4ee
-begin
-	function euler2(maxval)
-	    s = 2
-	    f_prevprev = 1
-	    f_prev = 2
-	    f = 2
-	    while f < maxval
-	        f = f_prev + f_prevprev
-	        f_prevprev, f_prev = f_prev, f
-	        iseven(f) && (s+=f)
-	    end
-	    return s
+function euler2(maxval)
+	s = 2
+	f_prevprev = 1
+	f_prev = 2
+	f = 2
+	while f < maxval
+		f = f_prev + f_prevprev
+		f_prevprev, f_prev = f_prev, f
+		iseven(f) && (s+=f)
 	end
-	
-	euler2(4_000_000)
+	return s
 end
 
-# ╔═╡ afe01c6d-c959-4d9b-acde-10c3935c07f4
-# @benchmark euler2(4_000_000)
+# ╔═╡ af241e5a-9a29-4ccf-88de-02b16cfd3053
+euler2_answer = euler2(4_000_000)
 
 # ╔═╡ 1aae2c52-84a3-11eb-3619-fd1d226ab543
 begin
-    submit_answer(euler2(4_000_000); prob_num=2)
+    submit_answer(euler2_answer; prob_num=2)
 end
 
 # ╔═╡ 1ab07640-84a3-11eb-3324-5b7f82a3de60
@@ -86,15 +79,15 @@ html"""
 """
 
 # ╔═╡ 76cdd09f-3fab-4be6-aefa-879c3512819a
-begin
-	# using Primes
-	euler3() = maximum(keys(factor(600851475143)))
-	euler3()
-end
+# using Primes
+euler3() = maximum(keys(factor(600851475143)))
+
+# ╔═╡ b34be739-c2f6-45ef-8739-a5fa2ad58e25
+euler3_answer = euler3()
 
 # ╔═╡ 1ab07640-84a3-11eb-380f-6f9c9331cc37
 begin
-    submit_answer(euler3(); prob_num=3)
+    submit_answer(euler3_answer; prob_num=3)
 end
 
 # ╔═╡ 1ab07640-84a3-11eb-164b-9babaf70a3ab
@@ -1210,14 +1203,15 @@ end
 # ╠═8fc2d6fa-206f-4254-8e39-c626c9fb6d58
 # ╟─1aae2c52-84a3-11eb-346f-99368af94262
 # ╠═fb47f5bc-1092-42d9-b091-54d20566e7bd
-# ╠═a6a5a0c9-0eca-4261-93be-1eebb877a2c0
+# ╠═9a37e33e-d3b6-443e-bf8c-172aef142024
 # ╠═1aae2c52-84a3-11eb-192d-9d80f63d47dd
 # ╟─1aae2c52-84a3-11eb-0833-9be45059026d
 # ╠═a5fc6c1e-b391-4b0f-8460-1e0ee13cc4ee
-# ╠═afe01c6d-c959-4d9b-acde-10c3935c07f4
+# ╠═af241e5a-9a29-4ccf-88de-02b16cfd3053
 # ╠═1aae2c52-84a3-11eb-3619-fd1d226ab543
 # ╟─1ab07640-84a3-11eb-3324-5b7f82a3de60
 # ╠═76cdd09f-3fab-4be6-aefa-879c3512819a
+# ╠═b34be739-c2f6-45ef-8739-a5fa2ad58e25
 # ╠═1ab07640-84a3-11eb-380f-6f9c9331cc37
 # ╟─1ab07640-84a3-11eb-164b-9babaf70a3ab
 # ╠═212f6986-86d7-4aa0-bab4-78c787c8bf03
