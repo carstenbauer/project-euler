@@ -1,6 +1,8 @@
 ## What is this?
 
-My Julia solutions to the first 50 Euler problems. See https://projecteuler.net and https://github.com/heetbeet/project-euler-julia.
+My Julia solutions to the first 50 Euler problems as [Pluto notebooks](https://github.com/fonsp/Pluto.jl). See https://projecteuler.net and https://github.com/heetbeet/project-euler-julia.
+
+![Screenshot 2021-04-12 at 12 23 50](https://user-images.githubusercontent.com/187980/114380119-fa792400-9b89-11eb-8b2d-459e2f75692b.png)
 
 ## Instructions
 
